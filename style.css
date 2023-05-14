@@ -3,6 +3,7 @@
     margin: 0;
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
+     color: #333;
 }
 
 .flex-row{
@@ -75,33 +76,51 @@
     align-items: center;
     font-weight: 650;
     border-radius: 8px;
-    color: #000;
+    background-image: linear-gradient(rgb(249, 154, 50) 50.52%, rgb(253, 185, 51));
+    color: #333;
     cursor: pointer;
     border: 0.68px solid #cacaca;
     padding: 0px 12px;
 }
 .main-container{
-    background-image: url('material/background.jpg');
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+    background-color: #fff;
     min-height: 100vh;
     width: 100%;
+    display: flex;
+    justify-content: center;
 }
 .overlay{
-    background-color: rgba(0, 0, 0, 0.5);
     width: 100%;
     min-height: 100%;
     height: fit-content;
     padding: 56px 48px 48px 48px;
-    display: inline-block;
     border-radius: 16px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+}
+@media screen and (max-width: 1693px) {
+   .overlay{ 
+      padding:  48px 40px 40px  48px;
+  }
+}
+@media screen and (max-width: 1435px) {
+   .overlay{ 
+      padding:  48px 34px 34px  48px;
+  }
+}
+@media screen and (max-width: 1267px) {
+   .overlay{ 
+     padding: 56px 26px 26px 48px;
+  }
 }
 @media screen and (max-width: 992px) {
   .overlay {
      padding: 48px 10px 48px 10px;
   }
 }
+
 .top-part{
     margin: 0 auto;
     width: 100%;
@@ -120,15 +139,134 @@
     font-weight: 700px;
     font-size: 35px;
     text-align: center;
-    color: #fff;
     margin-bottom: 12px;
 }
-.block-buttons{
-    background-color: rgba(255, 255, 255, 0.5);
+
+@media screen and (max-width: 992px) {
+ .block-buttons .button {
+     min-width: 10px;
+     padding: 0px 6px;
+  }
+}
+.block-buttons .button:hover{
+    background-image: linear-gradient(rgb(249, 154, 50) 40%, rgb(253, 185, 51));
+}
+.main-part{
+    width: 70%;
+    height: fit-content;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+@media screen and (max-width: 1693px) {
+    .main-part{ 
+     width: 80%;
+  }
+}
+@media screen and (max-width: 1435px) {
+    .main-part{ 
+     width:90%;
+  }
+}
+@media screen and (max-width: 1300px) {
+    .main-part{ 
+     width:100%;
+     display: flex;
+     flex-direction: column;
+  }
+}
+@media screen and (max-width: 1267px) {
+    .main-part{ 
+     width:100%;
+  }
+}
+@media screen and (max-width: 1267px) {
+    .main-part{ 
+     width:100%;
+  }
+}
+.main-part .left-part{
+    width: 80%;
+    min-height: 200px;
+    background-color: #fff;
+    border-radius: 16px;
+    padding: 48px 36px;
+
+}
+@media screen and (max-width: 1693px) {
+   .main-part .left-part{ 
+      padding:  48px 30px;
+  }
+}
+@media screen and (max-width: 1435px) {
+   .main-part .left-part{ 
+      padding:  48px 26px ;
+  }
+}
+@media screen and (max-width: 1267px) {
+   .main-part .left-part{ 
+     padding: 48px 20px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .main-part .left-part {
+     padding: 48px 10px;
+  }
+}
+.main-part .right-part{
+    width: 20%;
+    position: relative;
+}
+.main-part .right-part .container-specs{
+    position: fixed;
+    min-height: 464px;
+    height: fit-content;
+    background-color: #fff;
+    border-radius: 16px;
+    background-color: #fff;
+    border-radius: 16px;
+    top: 200px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 16px -3px;
+    width: 300px;
+    right: 54px;
+    display: flex;
+    flex-direction: column;
+
+}
+@media screen and (max-width: 1300px) {
+    .main-part .right-part .container-specs{ 
+     width:100%;
+     display: flex;
+     flex-direction: column;
+     position: static;
+  }
+}
+@media screen and (max-width: 1300px) {
+    .main-part .right-part{ 
+     width:100%;
+  }
+}
+@media screen and (max-width: 1267px) {
+    .main-part .right-part{ 
+     width:100%;
+  }
+}
+@media screen and (max-width: 1267px) {
+    .main-part .right-part{ 
+     width:100%;
+  }
+}
+@media screen and (max-width: 992px) {
+  .main-part .right-part {
+     width: 100%;
+  }
+}
+.main-part .right-part .container-specs .block-buttons{
     height: 60px;
     border-radius: 16px;
+    margin-top: auto;
 }
-.block-buttons .container-buttons{
+   
+.main-part .right-part .container-specs .block-buttons .container-buttons{
     position: relative;
     width: fit-content;
     left: 50%;
@@ -137,7 +275,7 @@
     display: flex;
     align-items: center;
 }
-.block-buttons .button{
+.main-part .right-part .container-specs .block-buttons .container-buttons .button{
     vertical-align: middle;
     margin-right: 8px;
     min-height: 30px;
@@ -147,42 +285,14 @@
     align-items: center;
     font-weight: 650;
     border-radius: 8px;
-    color: #fff;
+    color: #333;
     cursor: pointer;
     border: 0.68px solid #cacaca;
     padding: 0px 12px;
-}
-@media screen and (max-width: 992px) {
- .block-buttons .button {
-     min-width: 10px;
-     padding: 0px 6px;
-  }
-}
-.block-buttons .button:hover{
-    background-color:#f8f8f8;
-    color: #000;
-    transform: scale(1.04); 
-}
-.main-part{
-    width: 100%;
-    height: fit-content;
-    justify-content: space-around;
-    margin-top: 20px;
+    background-image: linear-gradient(rgb(249, 154, 50) 50.52%, rgb(253, 185, 51));
+    font-size: 12px;
 }
 
-.main-part .left-part{
-    width: 80%;
-    min-height: 200px;
-    background-color: #fff;
-    border-radius: 16px;
-    padding: 48px 36px;
-}
-.main-part .right-part{
-    width: 15%;
-    min-height: 200px;
-    background-color: #fff;
-    border-radius: 16px;
-}
 @media screen and (max-width: 992px) {
     .main-part {
     display: flex;
@@ -197,29 +307,38 @@
     margin-top: 20px;
 }
 }
+.bio-part {
+    width: 100%;
+    min-height: 600px;
+}
 .bio-part .title{
     font-size: 35px;
     font-weight: 700;
+    flex-direction: column-reverse;
+    width: 100%;
+    margin-bottom: 20px;
 }
 @media screen and (max-width: 992px) {
-    .bio-part .title{
-        display: flex;
-        flex-direction: column;
-    }
+  
      .friends-part .title{
         display: flex;
         flex-direction: column;
     }
 }
 .bio-part .title .image{
-  border-radius: 50%;
-  width: 120px;
-  height: 120px;
+  border-radius:16px;
+  width:800px;
+  height:600px;
   margin-right: 16px;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   background-image: url('./material/fattizzio.jpg');
+}
+@media screen and (max-width: 992px) {
+  .bio-part .title .image {
+     width: calc(100vw - 37px);
+  }
 }
 .bio-part .description{
     font-size: 14px;
@@ -266,6 +385,61 @@
 }
 
 .friends-part .description-container .description .image{
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin-right: 16px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.container-specs{
+    padding: 24px 20px;
+}
+.container-specs .title{
+    font-size: 26px;
+}
+.container-specs .title span{
+    font-size: 18px;
+    color: #ddd;
+}
+.container-specs .row-part{
+    display: flex;
+}
+.container-specs .percentage{
+    width: 100%;
+    height: 8px;
+    margin-top: 20px;
+    background-color: #00ff2a62;
+    position: relative;
+}
+.container-specs .percentage .line{
+    width: 10%;
+    height: 8px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: #00ff2a;
+    position: absolute;
+    left: 0px;
+}
+
+.container-specs .donation-part{
+    max-height: calc(464px - 100px);
+    overflow-y: auto;
+}
+.container-specs .donation-part .donation{
+    margin-top: 25px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.container-specs .donation-part .donation .description-text{
+    font-size: 14px;
+    font-weight: 500;
+    width: 60%;
+}
+
+.container-specs .donation-part .donation .image{
   border-radius: 50%;
   width: 40px;
   height: 40px;

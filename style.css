@@ -333,7 +333,7 @@
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url('./material/fattizzio.jpg');
+  background-image: url('./material/fattizzio.png');
 }
 @media screen and (max-width: 992px) {
   .bio-part .title .image {

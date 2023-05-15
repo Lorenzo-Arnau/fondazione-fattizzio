@@ -36,7 +36,7 @@
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 1;
 }
-.fake-modal,.send-text{
+.fake-modal,.send-text,.donate-modal{
     width: 400px;
     padding: 12px;
     min-height: 50px;
@@ -49,13 +49,13 @@
     left: 50%;
     transform: translate(-50%,-50%);
 }
-.fake-modal .title,.send-text .title{
+.fake-modal .title,.send-text .title ,.donate-modal .title{
     font-size: 20px;
     font-weight: 650;
     margin-bottom: 20px;
     text-align: center;
 }
-.fake-modal .text{
+.fake-modal .text,.donate-modal .text{
     font-size: 12px;
     margin-bottom: 20px;
     text-align: center;
@@ -63,10 +63,10 @@
 .send-text .text-area-message{
     margin: 10px 0px;
 }
-.fake-modal .button-container,.send-text .button-container{
+.fake-modal .button-container,.send-text .button-container,.donate-modal .button-container{
     width: 100%;
 }
-.fake-modal .button-container .button, .send-text .button-container .button{
+.fake-modal .button-container .button, .send-text .button-container .button, .donate-modal .button-container .button{
     vertical-align: middle;
     margin-right: 8px;
     min-height: 30px;
@@ -349,7 +349,7 @@
     margin-top: 48px;
 }
 .friends-part .title{
-    font-size: 35px;
+    font-size: 30px;
     font-weight: 700;
 }
 .friends-part .title .image{

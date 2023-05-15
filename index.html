@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Alla consolleeee Fattizzio</title>
+    <title>Fondazione Fattizzio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -29,8 +29,18 @@
         <textarea class="text-area-message" name="" id="" cols="30" rows="4" maxlength="50"></textarea>
         <div class="button-container flex-row center-all">
             <div class="button" onclick="sendMessage()">Invia e Chiudi</div>
+            <div class="button" onclick="closeModal()">Chiudi</div>
         </div>
     </div>
+     <div class="donate-modal flex-col invisible">
+         <div class="title">Dona un soldo al tuo dj's</div>
+         <div class="text">Puoi donare tramite IBAN o su PayPal a Elena alle coordinate qui sotto </div>
+         <div class="text"><a href="https://www.paypal.me/hellenns"> Paypal di Elena</a></div>
+         <div class="text">Bonifico a : IT77M36772223000EM000541273</div>
+         <div class="button-container flex-row center-all">
+             <div class="button" onclick="closeModal()">Chiudi</div>
+         </div>
+     </div>
     <div class="main-container" >
         <div class="overlay">
             <div class="top-part">
@@ -47,7 +57,7 @@
                 <div class="bio-part flex-col">
                     <div class="title flex-col ">
                         <div class="image" alt="" ></div>
-                        <div class="title">Una console per Luigi?</div>
+                        <div class="title">Una console per Luigi!</div>
                     </div>
                     <div class="description">
                        Luigi Fattizzo, per gli amici Gigi, nasce nel lontano 25 maggio 1988 a Neviano, un piccolo paese
@@ -145,7 +155,7 @@
                         <div class="container-buttons">
                             <div class="button" onclick="copyToSend()">Condividi</div>
                             <div class="button" onclick="openTextArea()">Messaggio</div>
-                            <div class="button">Dona</div>
+                            <div class="button" onclick="openDonate()">Dona</div>
                         </div>
                     </div>
                 </div>

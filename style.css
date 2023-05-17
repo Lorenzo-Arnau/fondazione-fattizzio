@@ -62,6 +62,7 @@
 }
 .send-text .text-area-message{
     margin: 10px 0px;
+    border: 0.68px solid #dddd;
 }
 .fake-modal .button-container,.send-text .button-container,.donate-modal .button-container{
     width: 100%;

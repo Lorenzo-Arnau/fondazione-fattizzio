@@ -50,7 +50,8 @@ function closeModal(){
   modal.classList.add('invisible')
 }
 function sendMessage(){
-   var textarea = document.getElementsByClassName('text-area-message')[0]
+   var input = document.getElementsByClassName('text-area-message')[0]
+   var textarea = document.getElementsByClassName('text-area-message')[1]
    console.log(textarea.value);
    Email.send({
     Host : "smtp.elasticemail.com",
@@ -59,7 +60,7 @@ function sendMessage(){
     To : 'buffering2021@libero.it',
     From : "limafika1@gmail.com",
     Subject : "Email Luigi",
-    Body : textarea.value
+    Body :input.value + '-' + textarea.value
   }).then(
     message => alert(message)
   );

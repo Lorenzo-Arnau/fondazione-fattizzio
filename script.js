@@ -54,12 +54,12 @@ function sendMessage(){
    var textarea = document.getElementsByClassName('text-area-message')[1]
    console.log(textarea.value);
    Email.send({
-    Host : "smtp.elasticemail.com",
-    Username : "limafika1@gmail.com",
-    Password : "058B598A11C24CE81978ADFC60948A2ABBF4",
-    To : 'buffering2021@libero.it',
-    From : "limafika1@gmail.com",
-    Subject : "Email Luigi",
+    Host : "",
+    Username : "",
+    Password : "",
+    To : '',
+    From : "",
+    Subject : "",
     Body :input.value + '-' + textarea.value
   }).then(
     message => alert(message)
